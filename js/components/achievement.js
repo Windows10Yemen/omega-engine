@@ -6,5 +6,11 @@ Vue.component("achievement", {
             showTooltip: false
         }
     },
-    template: `<script src="https://www.worldometers.info/js/bootstrap.min.js"></script>`
+    template: `<div class="achievement-wrapper">
+        <div class="tooltip" v-if="showTooltip">
+            <h4>{{achievement.title}}</h4>
+            <p v-html="achievement.description"></p>
+        </div>
+        <div @mouseenter="showTooltip = true" @mouseleave="showTooltip = false" :class="{completed: achievement.isCompleted}" class="achievement" v-html="achievement.html"></div>
+    </div>`
 });
