@@ -39,7 +39,7 @@ Vue.component("settings-menu", {
             a.style.display = "none";
             document.body.appendChild(a);
             a.href = "data:application/octet-stream;charset=utf-8," + this.exportString;
-            a.download = mod.primaryName+mod.secondaryName+dateString+".txt";
+            a.download = mod.primaryName+mod.secondaryName+dateString+".mp4";
             a.click();
             document.body.removeChild(a);
         },
