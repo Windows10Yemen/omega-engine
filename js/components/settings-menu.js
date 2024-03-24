@@ -3,8 +3,7 @@ Vue.component("settings-menu", {
     {
         return {
             settings: game.settings,
-            exportString: "The exported Save String will appear here. Keep it somewhere safe." +
-                " Click Import to load the save string from the text field.",
+            exportString: "<button>lmao</button>",
             themes: mod.themes,
             names: mod.layerNames,
             fonts: mod.fonts,
@@ -39,7 +38,7 @@ Vue.component("settings-menu", {
             a.style.display = "none";
             document.body.appendChild(a);
             a.href = "data:application/octet-stream;charset=utf-8," + this.exportString;
-            a.download = mod.primaryName+mod.secondaryName+dateString+".txt";
+            a.download = mod.primaryName+mod.secondaryName+dateString+".html";
             a.click();
             document.body.removeChild(a);
         },
